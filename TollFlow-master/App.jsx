@@ -1,8 +1,8 @@
 import React from "react";
 import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./Layout";
-import Dashboard from "./Pages/Dashboard";
-import Analytics from "./Pages/Analytics";
+import Dashboard from "./pages/Dashboard";
+import Analytics from "./pages/Analytics";
 
 export default function App() {
   return (
