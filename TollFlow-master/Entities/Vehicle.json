@@ -1,0 +1,65 @@
+{
+  "name": "Vehicle",
+  "type": "object",
+  "properties": {
+    "vehicle_number": {
+      "type": "string",
+      "description": "Vehicle license plate number"
+    },
+    "vehicle_type": {
+      "type": "string",
+      "enum": [
+        "car",
+        "truck",
+        "bus",
+        "motorcycle",
+        "suv"
+      ],
+      "default": "car",
+      "description": "Type of vehicle"
+    },
+    "payment_status": {
+      "type": "string",
+      "enum": [
+        "paid",
+        "unpaid",
+        "processing"
+      ],
+      "default": "unpaid",
+      "description": "Payment status of the vehicle"
+    },
+    "entry_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Time when vehicle entered the queue"
+    },
+    "exit_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Time when vehicle exited the queue"
+    },
+    "toll_booth": {
+      "type": "string",
+      "default": "booth_1",
+      "description": "Which toll booth the vehicle is assigned to"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "queued",
+        "processing",
+        "processed"
+      ],
+      "default": "queued",
+      "description": "Current status of the vehicle in the system"
+    },
+    "processing_time": {
+      "type": "number",
+      "description": "Time taken to process the vehicle in seconds"
+    }
+  },
+  "required": [
+    "vehicle_number",
+    "vehicle_type"
+  ]
+}
